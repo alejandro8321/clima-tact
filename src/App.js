@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
 import { Col, Row } from "react-bootstrap";
-import { DEVICE_SIZES } from "react-bootstrap/esm/createUtilityClasses";
+
+
 
 
 const api = {
-  key: "",
+  key: process.env.REACT_APP_API_KEY,
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
@@ -23,7 +24,7 @@ function App() {
       .then(result=> {
         setWeather(result);
         setQuery('');
-        //console.log(result)
+        console.log(result)
       });
     }
   }
@@ -40,6 +41,11 @@ function App() {
     return `${day} ${date} ${month} ${year}`
   }
 
+
+  console.log(api.base);
+  console.log(api.key);
+  console.log();
+
   return (
 
     <Container fluid className={(typeof weather.main != "undefined") ? ((weather.main.temp > 70) ? 'app warm'  : 'app'): 'app'}>
@@ -50,7 +56,7 @@ function App() {
           <div className="search-box">
             <input 
             type="text" 
-            placeholder="City Name..." 
+            placeholder={"City..." }
             className="search-bar"
             onChange={e=>setQuery(e.target.value)}
             value={query}
@@ -59,6 +65,8 @@ function App() {
           </div>
         </Row>
 
+      
+        
         <Row >
         {
           (typeof weather.main != "undefined") ? 
