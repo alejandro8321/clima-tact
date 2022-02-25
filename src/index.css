@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'montseratt', sans-serif;  
+}
+
+
+.app {
+  background: linear-gradient(180deg, rgba(48,0,78,1) 0%, rgba(81,9,121,1) 18%, rgba(0,204,255,1) 100%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transition: 0.4 ease-out;
+  min-height: 100vh;
+}
+
+.app.warm {
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(255,44,0,1) 2%, rgba(253,169,29,1) 61%, rgba(246,255,0,1) 100%);
+ 
+}
+
+
+
+.search-box{
+  
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-box .search-bar {
+  border-radius: 2em;
+  width: 60%;
+  padding: 0.4em;
+  background-color: rgba(255, 255, 255, 0.521);
+  border: none;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  transition: 0.4s ease;
+}
+
+
+.search-box .search-bar:focus{
+  background-color: rgb(255, 255, 255);
+}
+
+
+.location-box .location {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+
+.location-box .date {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 50, 0.5);
+
+}
+
+
+.weather-box {
+  text-align: center;
+
+}
+
+
+.weather-box .temp{
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.233);
+  border-radius: 16px;
+
+  padding: 15px 25px;
+
+  color: #FFF;
+  font-size: 102px;
+  font-weight: 900;
+
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+
+.weather-box .weather {
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.extra-weather-box {
+  
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.233);
+  border-radius: 16px;
+
+  padding: 15px 25px;
+
+  color: #FFF;
+  font-size: 36px;
+  font-weight: 900;
+
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+
+.extra-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
